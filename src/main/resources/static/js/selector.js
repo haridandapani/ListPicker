@@ -77,25 +77,6 @@ function getMovie(){
     return movies;
 }
 
-function submitToJava(event){
-    event.preventDefault();
-    moviesList = [];
-    for (let i = 1; i <= movies; i ++){
-        moviesList.push(document.getElementById("movie" + i).value);
-    }
-    personList = [];
-    for (let i = 1; i <= person; i ++){
-        personList.push(document.getElementById("person" + i).value);
-    }
-    const postParameters = {
-        movies: moviesList.toString(),
-        people: personList.toString(),
-      };
-      $.post("/setup", postParameters, response => {
-    });
-    
-}
-
 function indexOnload(){
     document.getElementById("numMovies").value = movies;
     document.getElementById("numPeople").value = person;

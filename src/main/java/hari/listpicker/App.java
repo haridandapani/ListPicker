@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.HashMap;
-import java.util.Map;
 
 import freemarker.template.Configuration;
 import spark.ExceptionHandler;
@@ -16,8 +14,7 @@ import spark.template.freemarker.FreeMarkerEngine;
 
 public class App {
 
-  private static final Map<Integer, Rave> rooms = new HashMap<>();
-  private static final int DEFAULT_PORT = 4567;
+  private static final int DEFAULT_PORT = 9000;
   // URL PATHS
   public static final String LANDING_PAGE = "/";
 
@@ -59,14 +56,11 @@ public class App {
 
     FreeMarkerEngine freeMarker = createEngine();
 
-    Spark.post("/setup", new SetupGUI());
     // Spark.post("/rave", new RaveGUI());
     // Spark.post("/setupWithRoom", new SetupWithRoomGUI());
     Spark.get("/", new HomeGUI(), freeMarker);
-  }
-
-  public static Map<Integer, Rave> getRooms() {
-    return rooms;
+    Spark.post("/setup", new SetupGUI(), freeMarker);
+    Spark.post("/nextPerson", new GetNextGUI());
   }
 
   /**

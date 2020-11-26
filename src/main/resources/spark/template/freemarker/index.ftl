@@ -19,6 +19,12 @@
     <body onload = "indexOnload()">
         <div id = "former">
             <form id = "thisForm" method = "POST" action = "/setup">
+            
+                <div class = "hider">
+                <input type = "number" id = "numMovies" name = "numMovies" required readonly>
+                <input type = "number" id = "numPeople" name = "numPeople" required readonly>
+                </div>
+
                 <label for = "movie1"><mark>Item 1</mark></label>
                 <input type="text" id = "movie1" name = "movie1" required>
                 <br>
@@ -38,16 +44,12 @@
                 <label for = "person1"><mark>Person 1</mark></label>
                 <input type="text" id = "person1" name = "person1" required>
                 <br>
-                <label for = "person1"><mark>Person 2</mark></label>
+                <label for = "person2"><mark>Person 2</mark></label>
                 <input type="text" id = "person2" name = "person2" required>
                 <div id = "addperson">
                 </div>
                 <br>
 
-                <div class = "hider">
-                <input id = "numMovies" readonly>
-                <input id = "numPeople" readonly>
-                </div>
                 <button type = "button" onclick="addPerson()">Add person</button>
                 <button type = "button" onclick="removePerson()">Remove person</button>
                 <br>

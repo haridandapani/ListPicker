@@ -28,7 +28,8 @@ public class Picker {
     } else {
       this.peopleCopy = new ArrayList<String>(people);
       Collections.shuffle(this.peopleCopy);
-      return getPerson();
+      String thisPerson = peopleCopy.remove(0);
+      return thisPerson;
     }
   }
 
