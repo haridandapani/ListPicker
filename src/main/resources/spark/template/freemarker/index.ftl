@@ -57,7 +57,7 @@
                 <br>
 
                 <h4>Order of Words</h4>
-                <input type="radio" id="given" name="order" value="given" selected>
+                <input type="radio" id="given" name="order" value="given" checked>
                 <label for="given">Given Order</label><br>
                 <input type="radio" id="snake" name="order" value="snake">
                 <label for="snake">Snaking Order</label><br>

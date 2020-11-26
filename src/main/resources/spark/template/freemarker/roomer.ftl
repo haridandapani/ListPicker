@@ -92,6 +92,7 @@
     <div id = "instructions">
         <h3>Select an item to eliminate it.</h3>
     </div>
+    <h3 align = "center"><a href = "/">Go home</a></h3>
 
 
 

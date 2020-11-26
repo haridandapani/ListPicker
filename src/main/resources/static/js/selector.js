@@ -27,7 +27,7 @@ function addMovie(){
 }
 
 function removeMovie(){
-    if (movies > 3){
+    if (movies > 3 && movies > person + 1){
         document.getElementById("movie" + movies).remove();
         document.getElementById("label" + movies).remove();
         document.getElementById("break" + movies).remove();
