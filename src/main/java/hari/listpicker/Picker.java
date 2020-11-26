@@ -9,12 +9,18 @@ public class Picker {
   private List<String> movies;
   private List<String> people;
   private List<String> peopleCopy;
+  private int order;
+  private int rounds;
 
-  public Picker(List<String> movies, List<String> people) {
+  public Picker(List<String> movies, List<String> people, int order) {
     this.movies = movies;
     this.people = people;
     this.peopleCopy = new ArrayList<String>(people);
-    Collections.shuffle(this.peopleCopy);
+    this.order = order;
+    this.rounds = 0;
+    if (order == 1) {
+      Collections.shuffle(this.peopleCopy);
+    }
   }
 
   public List<String> getMovies() {
@@ -26,8 +32,13 @@ public class Picker {
       String thisPerson = peopleCopy.remove(0);
       return thisPerson;
     } else {
+      rounds++;
       this.peopleCopy = new ArrayList<String>(people);
-      Collections.shuffle(this.peopleCopy);
+      if (order == 1) {
+        Collections.shuffle(this.peopleCopy);
+      } else if (order == 2 && rounds % 2 == 1) {
+        Collections.reverse(this.peopleCopy);
+      }
       String thisPerson = peopleCopy.remove(0);
       return thisPerson;
     }

@@ -32,7 +32,15 @@ public class SetupGUI implements TemplateViewRoute {
       people.add(vars.value("person" + j));
     }
 
-    Picker picker = new Picker(movies, people);
+    String order = vars.value("order");
+    int orderer = 3;
+    if (order.equals("random")) {
+      orderer = 1;
+    } else if (order.equals("snake")) {
+      orderer = 2;
+    }
+
+    Picker picker = new Picker(movies, people, orderer);
 
     String person = picker.getPerson();
 

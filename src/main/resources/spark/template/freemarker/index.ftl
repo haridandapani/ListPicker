@@ -16,6 +16,7 @@
             color: black;
         }
     </style>
+    <h1 align="center">Set up your list to pick!</h1>
     <body onload = "indexOnload()">
         <div id = "former">
             <form id = "thisForm" method = "POST" action = "/setup">
@@ -25,6 +26,7 @@
                 <input type = "number" id = "numPeople" name = "numPeople" required readonly>
                 </div>
 
+                <h4>Items to select</h4>
                 <label for = "movie1"><mark>Item 1</mark></label>
                 <input type="text" id = "movie1" name = "movie1" required>
                 <br>
@@ -40,7 +42,7 @@
                 <button type = "button" onclick="removeMovie()">Remove item</button>
 
                 <br>
-                <br>
+                <h4>Participants</h4>
                 <label for = "person1"><mark>Person 1</mark></label>
                 <input type="text" id = "person1" name = "person1" required>
                 <br>
@@ -54,10 +56,18 @@
                 <button type = "button" onclick="removePerson()">Remove person</button>
                 <br>
 
+                <h4>Order of Words</h4>
+                <input type="radio" id="given" name="order" value="given" selected>
+                <label for="given">Given Order</label><br>
+                <input type="radio" id="snake" name="order" value="snake">
+                <label for="snake">Snaking Order</label><br>
+                <input type="radio" id="random" name="order" value="random">
+                <label for="random">Random</label> 
+
+                <br>
 
                 <input type = "submit" value="Make List!">
             </form>
-            <hr>
 
         </div>
     </body>
