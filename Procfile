@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* hari.raveapp.App
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* hari.listpicker.App
