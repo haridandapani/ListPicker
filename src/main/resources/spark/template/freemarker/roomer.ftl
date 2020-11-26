@@ -15,6 +15,22 @@
             background-color: #DED4CE;
             color: black;
         }
+        .block {
+          display: block;
+          width: 100%;
+          border: none;
+          background-color: #4C56AF;
+          color: white;
+          padding: 14px 28px;
+          font-size: 16px;
+          cursor: pointer;
+          text-align: center;
+        }
+
+        .block:hover {
+          background-color: #ddd;
+          color: black;
+        }
     </style>
     <script>
     tempers = [];
@@ -44,6 +60,7 @@
                 elem.parentNode.removeChild(elem);
             }
             document.getElementById("eliminator").innerHTML = "Congratulations! You have selected:";
+            document.getElementById("instructions").innerHTML = "";
         }
     }
     </script>
@@ -68,10 +85,13 @@
     <script>
         text = ""
         for (var i = 0; i < tempers.length; i++) {
-            text += "<h2 onclick = \"updateMovies(event)\" id=movie"+i+">"+tempers[i] + "</h2>";
+            text += "<button class=\"block\" onclick = \"updateMovies(event)\" id=movie"+i+">"+tempers[i] + "</button>";
         }
         document.getElementById("allmovies").innerHTML = text;
     </script>
+    <div id = "instructions">
+        <h3>Select an item to eliminate it.</h3>
+    </div>
 
 
 
