@@ -5,6 +5,9 @@ let iterator = 0;
 let timer;
 let roomNumber = -1;
 
+let prevmovies = [];
+let prevpeople = Set();
+
 function addMovie(){
     movies = movies + 1;
     let wheel = document.createElement("input");
@@ -80,4 +83,17 @@ function getMovie(){
 function indexOnload(){
     document.getElementById("numMovies").value = movies;
     document.getElementById("numPeople").value = person;
+}
+
+function clearStorage(){
+	let prevmovies = [];
+	let prevpeople = [];
+}
+
+function storeMovie(item){
+	prevmovies.push(item);
+}
+function storePeople(item){
+	prevpeople.push(item)
+
 }

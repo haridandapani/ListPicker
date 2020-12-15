@@ -3,7 +3,7 @@
     <title>ListPicker by Hari</title>
     <style>
         body{
-            background-color: lightcoral;
+            background-color: #f4f6f6;
         }
         .hider {
             display : none;
@@ -12,7 +12,7 @@
             text-align: center;
         }
         mark {
-            background-color: #DED4CE;
+            background-color: #f4f6f6;
             color: black;
         }
     </style>

@@ -3,7 +3,7 @@
     <title>ListPicker by Hari</title>
     <style>
         body{
-            background-color: lightcoral;
+            background-color: #f4f6f6;
         }
         .hider {
             display : none;
@@ -12,7 +12,7 @@
             text-align: center;
         }
         mark {
-            background-color: #DED4CE;
+            background-color: #f4f6f6;
             color: black;
         }
         .block {
@@ -30,6 +30,12 @@
         .block:hover {
           background-color: #ddd;
           color: black;
+        }
+        div.sticky {
+          position: -webkit-sticky; /* Safari */
+          position: sticky;
+          top: 0;
+          background-color: f4f6f6;
         }
     </style>
     <script>
@@ -64,8 +70,9 @@
         }
     }
     </script>
-    
-    <h1 id = "eliminator" align = "center">${person}</h1>
+    <div class = "sticky">
+        <h1 id = "eliminator" align = "center" >${person}</h1>
+    </div>
     <hr>
     <br>
     <#if movies??>
