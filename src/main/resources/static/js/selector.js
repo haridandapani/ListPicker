@@ -110,6 +110,7 @@ function indexOnload(){
 			}
 		}
 	}
+	validateCheckbox();
 }
 
 function store(){
@@ -131,4 +132,19 @@ function logstorage(){
 	console.log(sessionStorage.getItem("prevpeople"));
 	console.log(sessionStorage.getItem("movies"));
 	console.log(sessionStorage.getItem("person"));
+}
+
+function validateCheckbox(){
+  // Get the checkbox
+  var checkBox = document.getElementById("obfuscate");
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+	for (let mo = 1; mo <= 	movies; mo++){
+		document.getElementById("movie" + mo).type = 'password';
+	}
+  } else {
+	for (let mo = 1; mo <= 	movies; mo++){
+		document.getElementById("movie" + mo).type = 'text';
+	}
+  }
 }

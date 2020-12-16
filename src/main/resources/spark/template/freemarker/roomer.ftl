@@ -33,6 +33,24 @@
           background-color: #ddd;
           color: black;
         }
+        .blocktwo {
+          display: block;
+          width: 100%;
+          border: none;
+          background-color: lightcoral;
+          color: white;
+          padding: 14px 28px;
+          font-size: 16px;
+          cursor: pointer;
+          text-align: center;
+          font-family:'Lucida Console', "monospace";
+          text-transform: uppercase;
+        }
+
+        .blocktwo:hover {
+          background-color: #ddd;
+          color: black;
+        }
         div.sticky {
           position: -webkit-sticky; /* Safari */
           position: sticky;
@@ -106,7 +124,7 @@
         for (var i = 0; i < tempers.length; i++) {
             text += "<button class=\"block\" onclick = \"updateMovies(event)\" id=movie"+i+">"+tempers[i] + "</button>";
         }
-        text += "<button class=\"block\" onclick = \"decline(event)\" id=decline>I decline to act</button>";
+        text += "<button class=\"blocktwo\" onclick = \"decline(event)\" id=decline>I decline to act</button>";
         document.getElementById("allmovies").innerHTML = text;
     </script>
     <div id = "instructions">
