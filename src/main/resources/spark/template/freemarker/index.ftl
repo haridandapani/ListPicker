@@ -19,7 +19,7 @@
     <h1 align="center">Set up your list to pick!</h1>
     <body onload = "indexOnload()">
         <div id = "former">
-            <form id = "thisForm" method = "POST" action = "/setup">
+            <form id = "thisForm" method = "POST" action = "/setup" onsubmit="store()">
             
                 <div class = "hider">
                 <input type = "number" id = "numMovies" name = "numMovies" required readonly>
