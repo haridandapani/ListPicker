@@ -47,6 +47,24 @@ mark {
   background-color: #ddd;
   color: black;
 }
+
+.homer {
+  margin: auto;
+  display: block;
+  width: 18%;
+  border: none;
+  background-color: #eb34e1;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  font-family:'Lucida Console', "monospace";
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 25px;
+}
+
 div.sticky {
   position: -webkit-sticky; /* Safari */
   position: sticky;

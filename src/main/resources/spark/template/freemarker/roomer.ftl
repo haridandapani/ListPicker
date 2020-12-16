@@ -74,7 +74,9 @@
     <div id = "instructions">
         <h4>Select an item to eliminate it.</h4>
     </div>
-    <h4 align = "center"><a href = "/">Go home</a></h4>
+    <div align = "center">
+        <a href = "/" class = "homer">Go Home</a>
+    </div>
 
 
 
