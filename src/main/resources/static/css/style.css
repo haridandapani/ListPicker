@@ -1,84 +1,147 @@
-html{
-  background-color: lightgrey;
+body{
+    background-color: #f4f6f6;
 }
+.hider {
+    display : none;
+}
+div {
+    text-align: center;
+}
+mark {
+    background-color: #f4f6f6;
+    color: black;
+}
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #4C56AF;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  font-family:'Lucida Console', "monospace";
+  text-transform: uppercase;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+.blocktwo {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: lightcoral;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  font-family:'Lucida Console', "monospace";
+  text-transform: uppercase;
+}
+
+.blocktwo:hover {
+  background-color: #ddd;
+  color: black;
+}
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: f4f6f6;
+}
+
 .column {
-  text-align: center;
-  width:70%;
-  margin:0 auto;
-}
-
-img.resize {
-  max-width:50%;
-  max-height:50%;
-}
-
-input[type=number] {
-  width: 8%;
-  border-radius: 14px;
-  padding: 6px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-
-div.central{
-  text-align: center;
-  width:30%;
-  margin:0 auto;
-}
-
-div.left{
   text-align: left;
+  margin:0 auto;
+  float: left;
+  padding: 10px;
 }
-
-img.home {
-  max-width:60%;
-  max-height:60%;
+.left{
+  width: 10%;
 }
-
-p.question{
+.right {
+  width: 25%;
+}
+.third {
+  padding: 1%;
+  width: 33%;
+}
+.quarter{
+  width: 25%;
+  text-align: center;
+}
+.half{
+  width: 100%;
+  text-align: center;
+}
+.middle {
+  width: 60%;
   font-size: 24px;
-  font: Arial, sans-serif;
-  font-weight: normal;
 }
 
-.button {
-	box-shadow:inset 0px 1px 0px 0px #e184f3;
-	background-color:#c123de;
-	border-radius:6px;
-	border:1px solid #ec8aff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #c600f2;
+.chome {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+
 }
-.button:hover {
-	background-color:#ed91ff;
+h1 {
+  font-size: 28px;
+  cursor: pointer;
+  text-align: center;
+  font-family:'Lucida Console', "monospace";
 }
-.button:active {
-	position:relative;
-	top:1px;
+label {
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  font-family:'Lucida Console', "monospace";
+}
+h4 {
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  font-family:'Lucida Console', "monospace";
+}
+h3 {
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  font-family:'Lucida Console', "monospace";
+}
+.basic-form {
+    margin: 5px 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
-input[type="radio"] {
-  /* remove standard background appearance */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  /* create custom radiobutton appearance */
-  width: 20px;
-  height: 20px;
-  /* background-color only for content */
-  background-clip: content-box;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
+.basic-form input[type=text], input[type=password] {
+    padding: 4px 4px;
+    margin: 3px 0;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 333px;
 
-/* appearance for checked radiobutton */
-input[type="radio"]:checked {
-  background-color: #3d75db;
+    font-family: 'Lato', sans-serif;
+}
+.basic-form input[type=submit] {
+    padding: 10px 15px;
+    margin: 10px 0;
+    position: relative;
+    align-self: center;
+
+    background: #49C59F;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
 }

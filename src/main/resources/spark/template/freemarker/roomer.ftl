@@ -1,63 +1,7 @@
 <html>
     <meta charset="UTF-8">
-    <title>ListPicker by Hari</title>
-    <style>
-        body{
-            background-color: #f4f6f6;
-        }
-        .hider {
-            display : none;
-        }
-        div {
-            text-align: center;
-        }
-        mark {
-            background-color: #f4f6f6;
-            color: black;
-        }
-        .block {
-          display: block;
-          width: 100%;
-          border: none;
-          background-color: #4C56AF;
-          color: white;
-          padding: 14px 28px;
-          font-size: 16px;
-          cursor: pointer;
-          text-align: center;
-          font-family:'Lucida Console', "monospace";
-          text-transform: uppercase;
-        }
-
-        .block:hover {
-          background-color: #ddd;
-          color: black;
-        }
-        .blocktwo {
-          display: block;
-          width: 100%;
-          border: none;
-          background-color: lightcoral;
-          color: white;
-          padding: 14px 28px;
-          font-size: 16px;
-          cursor: pointer;
-          text-align: center;
-          font-family:'Lucida Console', "monospace";
-          text-transform: uppercase;
-        }
-
-        .blocktwo:hover {
-          background-color: #ddd;
-          color: black;
-        }
-        div.sticky {
-          position: -webkit-sticky; /* Safari */
-          position: sticky;
-          top: 0;
-          background-color: f4f6f6;
-        }
-    </style>
+    <title>📜 ListPicker by Hari</title>
+    <link rel="stylesheet" href="static/css/style.css">
     <script>
     tempers = [];
     found = [];
@@ -128,9 +72,9 @@
         document.getElementById("allmovies").innerHTML = text;
     </script>
     <div id = "instructions">
-        <h3>Select an item to eliminate it.</h3>
+        <h4>Select an item to eliminate it.</h4>
     </div>
-    <h3 align = "center"><a href = "/">Go home</a></h3>
+    <h4 align = "center"><a href = "/">Go home</a></h4>
 
 
 
