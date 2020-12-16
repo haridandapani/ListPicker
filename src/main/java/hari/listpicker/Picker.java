@@ -14,6 +14,7 @@ public class Picker {
 
   public Picker(List<String> movies, List<String> people, int order) {
     this.movies = movies;
+    Collections.shuffle(this.movies);
     this.people = people;
     this.peopleCopy = new ArrayList<String>(people);
     this.order = order;

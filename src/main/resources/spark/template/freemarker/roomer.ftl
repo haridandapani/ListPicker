@@ -25,6 +25,8 @@
           font-size: 16px;
           cursor: pointer;
           text-align: center;
+          font-family:'Lucida Console', "monospace";
+          text-transform: uppercase;
         }
 
         .block:hover {
@@ -67,7 +69,17 @@
             }
             document.getElementById("eliminator").innerHTML = "Congratulations! You have selected:";
             document.getElementById("instructions").innerHTML = "";
+            elem = document.getElementById("decline");
+            elem.parentNode.removeChild(elem);
         }
+    }
+    function decline(event){
+        const postParameters = {};
+        $.post("/nextPerson", postParameters, response => {
+            const jsonRes = JSON.parse(response)
+            newbie = jsonRes.newbie;
+            document.getElementById("eliminator").innerHTML = newbie;
+        });
     }
     </script>
     <div class = "sticky">
@@ -94,6 +106,7 @@
         for (var i = 0; i < tempers.length; i++) {
             text += "<button class=\"block\" onclick = \"updateMovies(event)\" id=movie"+i+">"+tempers[i] + "</button>";
         }
+        text += "<button class=\"block\" onclick = \"decline(event)\" id=decline>I decline to act</button>";
         document.getElementById("allmovies").innerHTML = text;
     </script>
     <div id = "instructions">
